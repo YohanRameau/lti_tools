@@ -44,7 +44,8 @@ PROJECT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    'rest_framework'
+    'oauth2_provider',
+    'rest_framework',
 ]
 
 INSTALLED_APPS = FIRST_PARTY_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -131,3 +132,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# OAUTH2
+
+OAUTH2_PROVIDER = {
+    # this is the list of available scopes
+    'SCOPES': {'read': 'Read scope', 'write': 'Write scope', 'groups': 'Access to your groups'}
+}
+
+### REST FRAMEWORK
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    )
+}
