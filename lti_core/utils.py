@@ -76,19 +76,6 @@ from urllib.request import Request
 # }
 
 
-def hello(request: "Request") -> None:
-    """Sphinx Hello World functions  
-
-    :param Request request: a HTTP request receive by the tool server
-
-    :returns: nothing
-    :rtype: None 
-
-    :raises LTIException: This method raise a LTIException if the Message Launch cannot be validate.  
-    """
-    pass
-
-
 @dataclass
 class Validator:
 
@@ -177,3 +164,4 @@ class Validator:
         :rtype: bool         
         """
         pass
+

@@ -40,6 +40,7 @@ FIRST_PARTY_APPS = [
 ]
 
 PROJECT_APPS = [
+    'lti_core'
     
 ]
 
